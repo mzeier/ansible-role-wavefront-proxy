@@ -53,5 +53,4 @@ Apache 2.0
 
 Author Information
 ------------------
-Wavefront Ops <ops@threatstack.com>
 Use github issues for bugs in this repo.
