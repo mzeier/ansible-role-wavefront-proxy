@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: wavefront_proxy
   author: mrz
   description: Install the Wavefront Proxy
   company: Wavefront by VMware
@@ -42,4 +43,5 @@ galaxy_info:
   - cloud:ec2
   - monitoring
   - system
+  - wavefront
 dependencies: []
