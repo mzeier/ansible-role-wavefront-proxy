@@ -1,38 +1,57 @@
-Role Name
+Wavefront Ansible Role
 =========
 
-A brief description of the role goes here.
+Ansible Role to deploy the Wavefront Proxy agent.
 
-Requirements
-------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Platforms
+---------
+
+* Amazon Linux
+* CentOS
+* RedHat
+* Ubuntu
 
 Role Variables
 --------------
+The following variables are available for override.
+```
+wavefront_api_token: :         # Required. Your API Key
+```
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Install
+----------------
+Using ansible galaxy, best for ad-hoc command situations:
+
+    $ ansible-galaxy install wavefront.wavefront-ansible
+
+To install into your playbook roles, use `-p ROLES_PATH` or `--path=ROLES_PATH`
+
+    $ ansible-galaxy install wavefront.wavefront-ansible -p /your/project/root/roles
+
+Check out: [Advanced Control over Role Requirements Files](http://docs.ansible.com/galaxy.html#advanced-control-over-role-requirements-files)
+
+
+Examples
+----------------
+1) Install Wavefront Proxy agent. This is the most basic configuration
+```
+- hosts: all
+  roles:
+    - { role: wavefront.wavefront-ansible, wavefront_api_token: XXXXXXXXXXXXX}
+```
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+None
 
 License
 -------
 
-BSD
+Apache 2.0
 
 Author Information
 ------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Wavefront Ops <ops@threatstack.com>
+Use github issues for bugs in this repo.
