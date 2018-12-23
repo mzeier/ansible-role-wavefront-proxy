@@ -21,17 +21,17 @@ wavefront_proxy_histogram_enabled: true
 # Histogram settings
 #
 # - minute aggregation:
-histogramMinsListenerPorts: 40001
+histogramMinuteListenerPorts: 40001
 histogramMinuteAccumulators: 2
 histogramMinuteFlushSecs: 70
 
 # - hour aggregation:
-histogramHoursListenerPorts: 40002
+histogramHourListenerPorts: 40002
 histogramHourAccumulators: 2
 histogramHourFlushSecs: 4200
 
 # - day aggregation:
-histogramDaysListenerPorts: 40003
+histogramDayListenerPorts: 40003
 histogramDayAccumulators: 2
 histogramDayFlushSecs: 18000
 
