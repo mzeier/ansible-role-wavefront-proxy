@@ -174,7 +174,7 @@ buffer=/var/spool/{{ wavefront_proxy_pkg }}/buffer
 {% if wavefront_proxy_histogram_enabled|default(False) %}
 ## Wavefront format, minute aggregation:
 ## Comma-separated list of ports to listen on.
-histogramMinsListenerPorts={{ histogramMinsListenerPorts }}
+histogramMinuteListenerPorts={{ histogramMinuteListenerPorts }}
 ## Number of accumulators per minute port
 histogramMinuteAccumulators={{ histogramMinuteAccumulators }}
 ## Time-to-live in seconds for a minute granularity accumulation on the proxy (before the intermediary is shipped to WF).
@@ -182,7 +182,7 @@ histogramMinuteFlushSecs={{ histogramMinuteFlushSecs }}
 
 ## Wavefront format, hour aggregation:
 ## Comma-separated list of ports to listen on.
-histogramHoursListenerPorts={{ histogramHoursListenerPorts }}
+histogramHourListenerPorts={{ histogramHourListenerPorts }}
 ## Number of accumulators per hour port
 histogramHourAccumulators={{ histogramHourAccumulators }}
 ## Time-to-live in seconds for an hour granularity accumulation on the proxy (before the intermediary is shipped to WF).
@@ -190,7 +190,7 @@ histogramHourFlushSecs={{ histogramHourFlushSecs }}
 
 ## Wavefront format, day aggregation:
 ## Comma-separated list of ports to listen on.
-histogramDaysListenerPorts={{ histogramDaysListenerPorts }}
+histogramDayListenerPorts={{ histogramDayListenerPorts }}
 ## Number of accumulators per day port
 histogramDayAccumulators={{ histogramDayAccumulators }}
 ## Time-to-live in seconds for a day granularity accumulation on the proxy (before the intermediary is shipped to WF).
