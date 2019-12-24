@@ -12,3 +12,7 @@
 - name: Run Yum Configure and install Wavefront Proxy
   include: yum_install.yml
   when: ansible_os_family == 'RedHat'
+
+- name: Configure Wavefront Proxy
+  include: configure.yml
+
